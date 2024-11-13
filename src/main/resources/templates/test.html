@@ -2,9 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Database Connection Test</title>
+    <style>
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
 </head>
 <body>
 <h1>Database Connection Test</h1>
-<p th:text="${message}">Test message will appear here</p>
+<pre th:text="${message}">Test message will appear here</pre>
 </body>
 </html>

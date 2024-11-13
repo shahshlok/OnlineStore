@@ -6,6 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
-    // JpaRepository<EntityClass, ID Type>
-    // Product is our entity, Integer is the type of our primary key (productId)
 }
