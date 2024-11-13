@@ -6,11 +6,18 @@
         pre {
             white-space: pre-wrap;
             word-wrap: break-word;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 <h1>Database Connection Test</h1>
+<h2>Connection Status:</h2>
 <pre th:text="${message}">Test message will appear here</pre>
+
+<h2>Table Structure:</h2>
+<pre th:text="${tableStructure}">Table structure will appear here</pre>
 </body>
 </html>
