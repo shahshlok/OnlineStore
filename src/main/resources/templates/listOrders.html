@@ -1,0 +1,36 @@
+<!-- src/main/resources/templates/listOrders.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order List</title>
+</head>
+<body>
+<h1>Order List</h1>
+
+<a th:href="@{/shop}">Back to Shop</a>
+
+<div th:each="order : ${orders}">
+    <h3 th:text="'Order ID: ' + ${order.orderId}"></h3>
+    <p>
+        Date: <span th:text="${order.orderDate}"></span><br/>
+        Customer: <span th:text="${order.customer.firstName + ' ' + order.customer.lastName}"></span><br/>
+        Total Amount: <span th:text="${order.totalAmount}"></span>
+    </p>
+
+    <table border="1">
+        <tr>
+            <th>Product ID</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr th:each="orderProduct : ${order.orderProducts}">
+            <td th:text="${orderProduct.product.productId}"></td>
+            <td th:text="${orderProduct.quantity}"></td>
+            <td th:text="${orderProduct.price}"></td>
+        </tr>
+    </table>
+    <hr/>
+</div>
+</body>
+</html>

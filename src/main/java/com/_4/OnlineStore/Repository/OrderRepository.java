@@ -1,4 +1,4 @@
 package com._4.OnlineStore.Repository;
 
-public class OrderRepository {
+public interface OrderRepository {
 }
